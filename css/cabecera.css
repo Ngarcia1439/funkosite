@@ -1,0 +1,111 @@
+
+/*                       ********************* HEADER *************************         */
+
+/* A la etiqueta header no le tengo que dar posicionamiento porque solo tiene una sola etiqueta hija que es el Nav*/
+header{
+    background-color: #30343F;
+    padding: 36px;
+}
+
+#logo{
+    width: 30px;
+}
+
+
+.navbar{ /*A la etiqueta Nav si le tengo que dar posicionamiento porque dentro tiene 2 etiquetas hijas. Darle posicionamiento "en fila" porque x defecto estan una arriba de la otra (row)*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar__logo{
+    max-width: 300px;
+}
+
+/*Despues tenemos que darle posicionamiento a una de las hijas, o sea al menu */
+
+.navbar .navbar__menu{ /*nombro dos veces navbar menu por cuestion de especificidad, para que aplique al menu del nav */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    
+}
+
+
+
+.navbar__link{
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 8px 16px;
+    display: inline-block; /*Los enlaces son etiquetas en linea, si bien le aplica visualmente el padding no se lo suma al flujo estatico de la pagina
+    entonces lo mas recomendable es ademas de darles el padding, cambiar su display de inline a inline block. o block. Por mas que usemos block tampoco va modificar porque como esta siendo modificado con flex no cambia si usamos inline o block pero solo que ahora si están esos paddig en el flujo de la pagina */
+    transition: background .3s ease-in-out;
+    position: relative;  /*Para que el elemento absoluto (submenu) sea relativo al padre y no al body, le damos un position relative al navbarlink */
+
+    
+
+}
+.navbar__link:hover{
+    background-color:lightcoral;
+    
+}
+
+.with-icon{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.with-submenu:hover .submenu{
+    display: block;
+}
+
+.submenu{
+    display: none;
+    width: 300px;
+    position: absolute; /*Le damos al submenu position absolute para sacarlo del flujo de la pagina, y ahi se pone debajo del elemento padre. Ahí "Shop" baja.*/
+    background-color: #30343F;
+    z-index: 3;
+    
+}
+
+.submenu__link{
+    color: #FFFFFF;
+    display: block;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+.submenu__link:hover{
+    background-color: lightcoral;
+    transition: background .3s ease-in-out;
+
+}
+
+
+
+.navbar__item{
+    list-style-type: none;
+}
+
+
+
+@media (max-width: 768px) {
+    nav{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20px;
+        
+
+    }
+    header{
+        height: 50px;
+    }
+
+}
+
+/*                       ********************* FIN HEADER CABECERA*************************         */

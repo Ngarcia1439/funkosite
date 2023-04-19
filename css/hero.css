@@ -1,0 +1,72 @@
+
+
+/*                       ********************* INICIO HERO BANNER *************************         */
+
+
+
+.hero{
+    background-image: url(/img/funkos-banner.webp);
+    width: 100%;
+    padding: 100px; 
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero::before{   /*Es una capa oscura que se posiciona entre la imagen y el texto. Es como si tuviesemos 3 capas, la capa del texto, el background filter con el before y atras la imagen. */
+    content: '';
+    background-color: rgba(0,0,0,0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2px) brightness(.9);
+}
+.hero__content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;  /*El Boton SHOP (hero_link) toma el 100% del ancho. Esto pasa porque su contenedor (el article) o sea el hero__content está con la propiedad display flex y por defecto el flex direction está en column, los elementos internos toman el valor strech, entonces lo que hace es tomar todo el ancho  disponible. Entonces para evitar eso, uso align item start en el contenedor padre. Y ahí tomará desde el inicio hasta el fin del elemento*/
+    z-index: 2;
+    position: relative;
+
+}
+
+
+
+.hero__tittle{
+    color: #FFFFFF;
+    font-size: 38px;
+    padding-bottom: 8px;
+
+}
+
+.hero__text{
+    color: #FFFFFF;
+    font-size: 14px;
+    padding-bottom: 35px;
+}
+
+.hero__link{
+    display: inline-block; /*Le pongo inline-block para que tome los margins y padding. Ya que si no, no los tomaria*/
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    line-height: 3px;
+    padding: 12px 68px;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+    
+}
+
+.hero__link:hover{
+    background-color: lightcoral;
+    color:white;
+    
+}
+
+/*                       ********************* FIN HERO *************************         */
+
+
+

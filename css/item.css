@@ -1,0 +1,19 @@
+
+
+/**                               ITEMS                             */
+
+
+.collection__cover{
+    order: 1;
+}
+
+.collection__licence{
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.collection__price{
+    font-size: 38px;
+    font-weight: 300;
+}

@@ -1,0 +1,12 @@
+footer{
+    background: #30343F;
+    padding: 48px;
+    
+}
+
+.footer__copy{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 36px;
+    color: antiquewhite;
+}
