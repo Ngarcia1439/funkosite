@@ -7,10 +7,10 @@
 .hero{
     background-image: url(/img/funkos-banner.webp);
     width: 100%;
-    padding: 100px; 
+    padding: var(--spacing-128); 
     background-position: top;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed;   
     position: relative;
 }
 
@@ -27,7 +27,7 @@
 .hero__content{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--spacing-20);
     align-items: start;  /*El Boton SHOP (hero_link) toma el 100% del ancho. Esto pasa porque su contenedor (el article) o sea el hero__content está con la propiedad display flex y por defecto el flex direction está en column, los elementos internos toman el valor strech, entonces lo que hace es tomar todo el ancho  disponible. Entonces para evitar eso, uso align item start en el contenedor padre. Y ahí tomará desde el inicio hasta el fin del elemento*/
     z-index: 2;
     position: relative;
@@ -37,24 +37,27 @@
 
 
 .hero__tittle{
-    color: #FFFFFF;
-    font-size: 38px;
+    font-family: var(--alternative-font);
+    color: var(--light-font-solid);
+    font-size: var(--font-jumbo);
     padding-bottom: 8px;
 
 }
 
 .hero__text{
-    color: #FFFFFF;
-    font-size: 14px;
-    padding-bottom: 35px;
+    font-family: var(--alternative-font);
+    color: var(--light-font-solid);
+    font-size: var(--font-medium);
+    padding-bottom: var(--spacing-36);
 }
 
 .hero__link{
     display: inline-block; /*Le pongo inline-block para que tome los margins y padding. Ya que si no, no los tomaria*/
-    background-color: #FFFFFF;
+    font-size: var(--font-medium);
+    background-color: var(--light-bg-solid);
+    padding: var(--spacing-12) var(--spacing-68);
     border-radius: 50px;
     line-height: 3px;
-    padding: 12px 68px;
     font-weight: 500;
     transition: all .3s ease-in-out;
     
