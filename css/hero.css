@@ -57,14 +57,13 @@
     background-color: var(--light-bg-solid);
     padding: var(--spacing-12) var(--spacing-68);
     border-radius: 50px;
-    line-height: 3px;
-    font-weight: 500;
+        font-weight: 500;
     transition: all .3s ease-in-out;
     
 }
 
 .hero__link:hover{
-    background-color: lightcoral;
+    background-color: var(--primary-900);
     color:white;
     
 }
