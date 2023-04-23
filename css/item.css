@@ -4,7 +4,7 @@
 
 
 .collection__cover{
-    order: 1;
+    order: -1;
 }
 
 .collection__licence{
@@ -16,4 +16,11 @@
 .collection__price{
     font-size: 38px;
     font-weight: 300;
+}
+
+
+.collection__text-item{
+    font-size:24px;
+    font-weight: 300;
+    padding-bottom: 20px;
 }

@@ -3,8 +3,8 @@
 
 /* A la etiqueta header no le tengo que dar posicionamiento porque solo tiene una sola etiqueta hija que es el Nav*/
 header{
-    background-color: #30343F;
-    padding: 36px;
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
 }
 
 #logo{
@@ -27,8 +27,8 @@ header{
 
 .navbar .navbar__menu{ /*nombro dos veces navbar menu por cuestion de especificidad, para que aplique al menu del nav */
     display: flex;
-    gap: 20px;
     align-items: center;
+    gap: var(--spacing-20);
 
     
 }
