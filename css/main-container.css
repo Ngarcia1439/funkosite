@@ -7,47 +7,47 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding: 16px 0;
 }
 
 .collection:nth-child(2) .collection__cover{
     order: -1;
 }
 
-
-
 .collection__content{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--spacing-24);
     align-items: start;
 }
 
 .collection__tittle{
-    font-size:46px;
+    font-family:var(--alternative-font);
+    font-size:var(--font-display);
     font-weight: 500;
 }
 
 .collection__text{
-    font-size:24px;
+    font-family:var(--alternative-font);
+    font-size:var(--font-large);
     font-weight: 300;
-    border-bottom: 2px solid red; 
-    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-solid); 
+    padding-bottom: var(--spacing-24);
 }
 
 .collection__link{
     display: inline-block;
-    font-size: medium;
-    background-color: #30343F;
-    color: antiquewhite;
-    padding: 16px 36px;
+    font-size: var(--font-medium);
+    background-color:  var(--dark-bg-solid);
+    color: var(--light-font-solid);
+    padding: var(--spacing-16) var(--spacing-36);
     border-radius: 50px;
     font-weight: 500;
+    transition: background .3s ease-in-out;
 }
 
 .collection__link:hover{
-    background-color: lightcoral;
-    transition: .3s ease-in-out;
+    background-color: var(--primary-900);
+    
 }
 
 /*                       ********************* FIN COLECCIONES -                 INICIO SLIDER *************************         */
@@ -56,7 +56,7 @@
 .slider{
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: var(--spacing-36);
     margin: 68px auto;
 }
 
