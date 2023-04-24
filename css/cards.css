@@ -9,11 +9,11 @@
 /*** ACA LO QUE HACEMOS ES, CUANDO SE POSICIONA EL CURSOR, ACTIVA EL HOVER, Y LE INDICAMOS QUE CUANDO LA IMAGEN QUE TIENE COMO MODIFICADOR "BACK" APAREZCA (BLOCK) Y DESAPAREZCA LA DE ADELANTE, (FRONT) POR ESO EL NONE.  ABAJO CREAMOS EL KEYFRAME FADE, PARA GENERAR ESE EFECTO. EN EL COVER DE ABAJO .card-item__cover img   LLAMAMOS SOLO AL IMG PARA APLICAR EN UNO SOLO, A LAS DOS IMG(FRONT Y BACK)***/
 
 .card-item__tag{
-    font-size: 8px;
+    font-size: var(--font-xsmall);
     text-transform: uppercase;
-    background-color: var(--primary-900);
-    color: antiquewhite;
-    padding: 8px 12px;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    padding: var(--spacing-8) var(--spacing-12);
     position: absolute; 
     right: 0; /*Recordemos que si le damos right para que vaya a la puntita superior derecha y el contenedor padre no está con posicion relative (no es relativo) va depender entonces del body. Por eso a cover le ponemos position relative a .card-item__cover (contenedor padre)*/
 }
@@ -60,7 +60,9 @@
 }
 
 
-/**                                         ANIMATIONS                          **/
+/**     ANIMATION DE DESVANESCIMIENTO PARA  card-item__cover img  (utilizo este para no llamar a las dos por separado (front y back)         **/
+
+
 @keyframes fade {
     0%{
         opacity: 0;
