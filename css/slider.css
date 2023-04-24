@@ -1,0 +1,20 @@
+/*********  INICIO SLIDER     ******/*
+
+
+.slider{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-36);
+    margin: 68px auto;
+}
+
+.slider__tittle{
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    text-transform: uppercase;
+}
+
+.slider__items{
+    display: flex;
+    gap: var(--spacing-24);
+}
