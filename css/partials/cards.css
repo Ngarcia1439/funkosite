@@ -59,16 +59,3 @@
     font-weight: 700;
 }
 
-
-/**     ANIMATION DE DESVANESCIMIENTO PARA  card-item__cover img  (utilizo este para no llamar a las dos por separado (front y back)         **/
-
-
-@keyframes fade {
-    0%{
-        opacity: 0;
-
-    }
-    100%{
-        opacity: 1;
-    }
-}
