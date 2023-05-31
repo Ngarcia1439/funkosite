@@ -58,7 +58,7 @@
 
 /* COLLECTIONS */
 
-.collection {
+.collection {  /*Usamos grid para repartir el espacio del texto y de la imagen en partes iguales. Quedan alineados y en la misma posicion */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
