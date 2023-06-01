@@ -1,23 +1,17 @@
 # 🚀 FUNKOSHOP
 
-### Tienda en linea sobre venta de figuras coleccionables Funkos.
+### Tienda en línea sobre venta de figuras coleccionables Funkos.
 
-Este es un proyecto como parte del challenge integrador para el curso de NodeJs del programa Codo a Codo 4.0.
+Este es un proyecto como parte del challenge integrador para el curso de NodeJS del Programa Codo a Codo 4.0.
 
-## Lenguajes utilizados:
+## ⚙️ Lenguajes Utilizados:
 
 - HTML
 - CSS
-      -Flex
-      -Grid
-      -Bootstrap
-- Javascript.
+    - Flex
+    - Grid
+    - Bootstrap
+- JavaScript 
 
 
-
-
-
-
-
-__Autor/a:__ Nicolás García
-
+__Autor/a:__ Nicolas Garcia

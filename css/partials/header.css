@@ -7,10 +7,6 @@
     padding: var(--spacing-36);
 }
 
-#logo{
-    width: 30px;
-}
-
 
 .navbar{ /*A la etiqueta Nav si le tengo que dar posicionamiento porque dentro tiene 2 etiquetas hijas. Darle posicionamiento "en fila" porque x defecto estan una arriba de la otra (row)*/
     display: flex;
@@ -25,12 +21,11 @@
 
 /*Despues tenemos que darle posicionamiento a una de las hijas, o sea al menu */
 
-.navbar .navbar__menu{ /*nombro dos veces navbar menu por cuestion de especificidad, para que aplique al menu del nav */
+
+.navbar__menu {
     display: flex;
     align-items: center;
     gap: var(--spacing-20);
-
-    
 }
 
 

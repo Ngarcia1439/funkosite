@@ -1,37 +1,57 @@
+/*Normalizamos de forma manual , o sea reseteamos los estilos de los elementos que tienen por defecto el navegador 
+Lo primero que hacemos es utilizar el selector universal  ( * )  y selector universal + before , selector universal + after.
+Si nosotros no ponemos *::before *::after, se va aplicar a todos los elementos del sitio las propiedades para resetear. Pero ademas se le agrega las pseudoclases before y after porque en algunos casos podemos llegar a utilizar pero tambien queremos normalizar esos estilos
+Seleccionamos todas las etiquetas por separados para aplicarle determinado estilo. Si recargamos, veriamos que ya nada tiene espaciado ni relleno*/
 
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Determina como se comportan tanto los margenes como los rellenos que vayamos a utilizar en nuestros elementos */
 }
 
-html {
+/*Border box, sirve para que por ejemplo si tenemos una caja de 300 px y le damos un padding o margin de 20 px no se lo suma adicional a los 300. O sea qu el total de la caja no pasa a valer 340 de ancho y de alto, si no, que esos 20 se descuentan de adentro del contenido. y los 300 se mantienen. Sirve porque si por ejemplo tenemos un width de 1200px y dos cajas de 600px, quedarian justo una al lado de la otra.Pero, si tenemos content-box en vez de border-box, se le sumarian los margenes o rellenos y ahi si, mandaria el elemento abajo porque pasaria los 300 fijos.*/ 
+
+/*Utilizamos elementos para normalizarlos de entrada. Tambien usamos la html que hace referencia a <html>, la etiqueta raiz de nuestro sitio, por ende todos los estilos que pongamos en esta etiqueta y que sean heredables van a ser  esos estilos heredados a sus elementos hijos y como todos los elementos son hijos de html entonces van a heredar ese comportamiento*/
+
+
+html{ 
     font-family: var(--base-font);
-    font-size: 62.5%;
+    font-size: 62.5%; /* Se utiliza este valor, porque el tamaño por defecto de los parrafos, de los textos en el navegador es de 16px. Pero es recomendable utilizar en nuestros sitios las unidades de medida, REM y EM, EM para textos y rem para espaciados. 
+    En sintesis, es engorroso calcular los tamaños en em, por ejemplo tenemos 15px  y queremos saber cuantos EM son.
+    Aplicando la propiedad font size 62.5%, transforma automaticamente al valor por defecto de 10px. Entonces sería facil sacar la cuenta.*/
     color: var(--dark-solid);
+
 }
 
-a {
+a{
     text-decoration: none;
     font-family: inherit;
-    color: inherit;
+    color: inherit; /*Esta propiedad sirve para, en este caso, tomar el color heredado en este caso heredado del html que es la madre de todas.) Ya que los enlaces aunque el color puesto en la etiqueta html es negro, sigue manteniendo el azul porque el user agent stylesheet del navegador. Igualmente ahora tomaría el blanco que aplicamos en el header  y footer ya que los a (enlaces), estan dentro del nav, dentro de los ul ,todo dentro del header.*/
 }
 
 .page-header,
-footer {
+footer{
     font-family: var(--alternative-font);
-    color: var(--light-font-solid);
+    color: var(--light-font-solid); /*Usamos el color heredable, en este caso le decimos que todos los elementos que esten dentro del header y footer esten de color blanco) */
 }
 
-ul, ol {
+
+
+ul , ol{
     list-style-type: none;
+
 }
 
-img {
+img{ /*Normalizamos la imagen al 100% para que ocupe siempre el 100% de su contenedor padre. Entonces si yo le puse que el maximo va ser de 300px, va ser de 300 y no va hacer overflow */ 
     width: 100%;
+
 }
+
+
+/*Como yo se que todas las vistas de mi pagina va tener un ancho de 1200px creo una clase utilitaria. CON ESTO LOGRAMOS QUE POR EJEMPLO, EL CONTENIDO NO SE ESCAPE A LO ANCHO, SI VIERAMOS EN CUALQUIER PANTALLA QUE SEA MAYOR A 1200PX SIEMPRE VA MANTENER EN ESTA REGLA Y VA CALCULAR EL MARGEN DE LOS COSTADOS EL NAVEGADOR LOS CALCULA AUTOMATICAMENTE, POR ESO EL 0 AUTO.*/
+
 
 input[type="text"]::placeholder {
     color: var(--dark-300);
