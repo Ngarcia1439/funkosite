@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.hero::before {
+.hero::before { 
     content: '';
     background-color: rgba(0,0,0, 0);
     width: 100%;
@@ -42,7 +42,7 @@
 }
 
 .hero__link {
-    display: inline-block;
+    display: inline-block; 
     font-size: var(--font-medium);
     background-color: var(--light-bg-solid);
     padding: var(--spacing-12) var(--spacing-68);
@@ -55,10 +55,12 @@
     background-color: var(--primary-900);
     color: var(--light-font-solid);
 }
+/*                       ********************* FIN HERO *************************         */
 
-/* COLLECTIONS */
 
-.collection {  /*Usamos grid para repartir el espacio del texto y de la imagen en partes iguales. Quedan alineados y en la misma posicion */
+/*                       *********************   COLLECTIONS    *************************  */
+
+.collection {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
