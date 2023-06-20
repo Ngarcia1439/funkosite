@@ -12,4 +12,4 @@ subtract.addEventListener('click', () => {
 });
 
 
-quantity.addEventListener('change', () => quantity.value = Number(quantity.value) < 0 && 0);
+quantity.addEventListener('change', () => quantity.value = Number(quantity.value) < 0 && 0); 
